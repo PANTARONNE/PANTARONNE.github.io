@@ -1742,7 +1742,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1732520806167),
+    lastupdate: new Date(1732525898459),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2524,6 +2524,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
+          
+        
       
     
     
@@ -2575,6 +2577,70 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div>
           <a class='readmore' href='/2024/11/25/blog01/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/11/25/blog02/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Catalyst Calculation Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Catalyst Calculation Blog">
+    <meta itemprop="description" content="Blog by PANTARONNE">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/11/25/blog02/"  itemprop="url">
+        INCAR文件的编写
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        一个最为简单的INCAR文件
+123SYSTEM = ISMEAR = SIGMA = 
+
+
+
+参数详解SYSTEMSYSTEM可以理解为本次计算任务的名称，可随意取。
+ISMEAR不同的值对应着不同的展宽方法：
+※ 对于半导体与绝缘体，取值**绝对不能大于0**，一般用0；
+※ 对于K点少的半导体和绝缘体，**只能使用0**
+※ 对于所有体系，想要获得更为精确到结果时选取-5，且K点数目需...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-11-25T00:00:00+08:00">2024-11-25</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/11/25/blog02/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2736,6 +2802,21 @@ Qu...
     
     
       
+  
+  <section class="widget tagcloud desktop mobile pjax">
+    
+  <header>
+    
+      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <a href="/tags/VASP/" style="font-size: 14px; color: #999">VASP</a>
+    </div>
+  </section>
+
 
     
   

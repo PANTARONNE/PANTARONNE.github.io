@@ -29,7 +29,7 @@
   <!-- front-matter head_begin end -->
   <link rel="preload" href="/css/style.css" as="style">
   <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-<link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+<link rel="preload" href="/fonts/haipai.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
   <!-- 页面元数据 -->
@@ -104,8 +104,8 @@ html {
   color: var(--color-text);
   width: 100%;
   height: 100%;
-  font-family: UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
-  font-size: 16px;
+  font-family: "haipai", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+  font-size: 18px;
 }
 html >::-webkit-scrollbar {
   height: 4px;
@@ -424,7 +424,7 @@ button {
   text-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 .cover-wrapper .cover-body .subtitle {
-  font-size: 20px;
+  font-size: 22.5px;
 }
 .cover-wrapper .cover-body .logo {
   max-height: 120px;
@@ -798,8 +798,8 @@ button {
   }
 }
 @font-face {
-  font-family: 'UbuntuMono';
-  src: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
+  font-family: 'haipai';
+  src: url("/fonts/haipai.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
@@ -940,7 +940,7 @@ button {
 }
 .l_header .nav-sub .title {
   font-weight: bold;
-  font-family: UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+  font-family: "haipai", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
   line-height: 1.2;
   max-height: 64px;
   white-space: normal;
@@ -1710,7 +1710,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1732638477273),
+    lastupdate: new Date(1732685232188),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2142,7 +2142,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin end-->
     <!-- front-matter body_begin begin -->
     <!-- front-matter body_begin end -->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow floatable blur "  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2159,7 +2159,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
         <a class="title flat-box" target="_self" href='/'>
           
-            <img no-lazy class='logo' src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/Logo-NavBar@3x.png'/>
+            <img no-lazy class='logo' src='/images/img_logo.png'/>
           
           
           
@@ -2175,16 +2175,77 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="博客"
+                href="/" title="主页"
                   
                   
                   
                     active-action="action-home"
                   >
-                  <i class='fa-solid fa-rss fa-fw'></i>博客
+                  <i class='fa-solid fa-rss fa-fw'></i>主页
                 </a>
                 
               </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/categories/" title="分类"
+                  
+                  
+                  
+                    active-action="action-categories"
+                  >
+                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="归档"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fa-solid fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
           
@@ -2211,16 +2272,77 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="博客"
+                href="/" title="主页"
                   
                   
                   
                     active-action="action-home"
                   >
-                  <i class='fa-solid fa-rss fa-fw'></i>博客
+                  <i class='fa-solid fa-rss fa-fw'></i>主页
                 </a>
                 
               </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/categories/" title="分类"
+                  
+                  
+                  
+                    active-action="action-categories"
+                  >
+                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="归档"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fa-solid fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
             
@@ -2375,6 +2497,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
         <time itemprop="dateCreated datePublished" datetime="2024-11-25T00:00:00+08:00">2024-11-25</time>
         
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E6%9D%82%E8%B0%88/" itemprop="url"><span itemprop="name">杂谈</span></a>
+            </span>
+          
+        
       </div>
       
         <div>
@@ -2434,6 +2564,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div>
         
         <time itemprop="dateCreated datePublished" datetime="2024-11-25T00:00:00+08:00">2024-11-25</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/">文献阅读</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/" itemprop="url"><span itemprop="name">文献阅读</span></a>
+            </span>
+          
         
       </div>
       
@@ -2498,6 +2636,14 @@ SYSTEM可以理解为本次计算任务的名称，可随意取。
       <div>
         
         <time itemprop="dateCreated datePublished" datetime="2024-11-25T00:00:00+08:00">2024-11-25</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/VASP%E5%AD%A6%E4%B9%A0/">VASP学习</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/VASP%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">VASP学习</span></a>
+            </span>
+          
         
       </div>
       
@@ -2601,6 +2747,38 @@ SYSTEM可以理解为本次计算任务的名称，可随意取。
     
     
       
+  
+  <section class="widget category desktop pjax">
+    
+  <header>
+    
+      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/VASP%E5%AD%A6%E4%B9%A0/" href="/categories/VASP%E5%AD%A6%E4%B9%A0/"
+            active-action="action-categoriesVASPE5ADA6E4B9A0"
+            ><div class='name'>VASP学习</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/" href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/"
+            active-action="action-categoriesE69687E78CAEE99885E8AFBB"
+            ><div class='name'>文献阅读</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E6%9D%82%E8%B0%88/" href="/categories/%E6%9D%82%E8%B0%88/"
+            active-action="action-categoriesE69D82E8B088"
+            ><div class='name'>杂谈</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
 
     
   
@@ -2620,7 +2798,7 @@ SYSTEM可以理解为本次计算任务的名称，可随意取。
 
 
     <div class='content'>
-      <a href="/tags/VASP/" style="font-size: 14px; color: #999">VASP</a> <a href="/tags/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/" style="font-size: 14px; color: #999">文献阅读</a>
+      <a href="/tags/VASP%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 14px; color: #999">VASP基础知识</a> <a href="/tags/%E5%8F%8D%E7%9B%B8%E5%82%AC%E5%8C%96%E5%89%82%E5%BB%BA%E6%A8%A1/" style="font-size: 14px; color: #999">反相催化剂建模</a>
     </div>
   </section>
 

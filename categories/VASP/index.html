@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://example.com/tags/vasp基础知识/"/>
+  <link rel="canonical" href="http://example.com/categories/vasp/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,13 +33,13 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Tag: VASP基础知识 - Catalyst Calculation Blog</title>
+  <title>Category: VASP - Catalyst Calculation Blog</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="Blog by PANTARONNE - John Doe - Catalyst Calculation Blog">
   
 <meta property="og:type" content="website">
 <meta property="og:title" content="Catalyst Calculation Blog">
-<meta property="og:url" content="http://example.com/tags/VASP%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html">
+<meta property="og:url" content="http://example.com/categories/VASP/index.html">
 <meta property="og:site_name" content="Catalyst Calculation Blog">
 <meta property="og:description" content="Blog by PANTARONNE">
 <meta property="og:locale" content="en_US">
@@ -2455,7 +2455,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/11/25/blog02/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/11/28/blog03/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Catalyst Calculation Blog">
   </span>
@@ -2473,23 +2473,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/11/25/blog02/"  itemprop="url">
-        INCAR文件的编写
+      <a href="/2024/11/28/blog03/"  itemprop="url">
+        KPOINTS文件的编写
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-         SYSTEM 参数
-SYSTEM可以理解为本次计算任务的名称，可随意取。
- ISMEAR 参数
-不同的值对应着不同的展宽方法：
-​	※ 对于半导体与绝缘体，取值绝对不能大于0，一般用0；
-​	※ 对于K点少的半导体和绝缘体，只能使用0；
-​	※ 对于所有体系，想要获得更为精确到结果时选取-5，且K点数目需要相应地大于等于3；
-​	※ 对于金属，一般取大于等于0的数值；
-​	※ 使用  IS...
+        一个典型的KPOINT文件结构如下：
+12345K-POINTS 0Gamma1 1 10 0 0
+​	※ 第一行：K-POINTS文件的标题，可随意取，但不可以没有；
+​	※ 第二行：0代表自动生成K点；
+​	※ 第三行：网格的生成方式；
+​		G-以gamma点为中心生成网格，M-原始的Monkhorst-Pack网格
+​	※ 第四行：在xyz三个方向上生成对应数目的K点；
+​		▪ 对...
       
     
   </div>
@@ -2497,20 +2496,20 @@ SYSTEM可以理解为本次计算任务的名称，可随意取。
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2024-11-25T00:00:00+08:00">2024-11-25</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-11-28T00:00:00+08:00">2024-11-28</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/VASP%E5%AD%A6%E4%B9%A0/">VASP学习</a>
+          <a class="category-link" href="/categories/VASP/">VASP</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/VASP%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">VASP学习</span></a>
+              <a href="/categories/VASP/" itemprop="url"><span itemprop="name">VASP</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class='readmore' href='/2024/11/25/blog02/' itemprop="url">
+          <a class='readmore' href='/2024/11/28/blog03/' itemprop="url">
             Read More
           </a>
         </div>
@@ -3285,7 +3284,7 @@ SYSTEM可以理解为本次计算任务的名称，可随意取。
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Catalyst Calculation Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"Blog by PANTARONNE"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Catalyst Calculation Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/tags/VASP基础知识/","name":"VASP基础知识"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Catalyst Calculation Blog","url":"http://example.com/","keywords":null,"description":"Blog by PANTARONNE","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"Blog by PANTARONNE"},"publisher":{"@type":"Organization","name":"Catalyst Calculation Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"Blog by PANTARONNE","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Catalyst Calculation Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Catalyst Calculation Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"Blog by PANTARONNE"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Catalyst Calculation Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/VASP/","name":"VASP"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Catalyst Calculation Blog","url":"http://example.com/","keywords":null,"description":"Blog by PANTARONNE","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"Blog by PANTARONNE"},"publisher":{"@type":"Organization","name":"Catalyst Calculation Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"Blog by PANTARONNE","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Catalyst Calculation Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

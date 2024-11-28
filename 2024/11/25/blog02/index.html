@@ -45,7 +45,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-11-24T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-11-28T11:01:27.801Z">
+<meta property="article:modified_time" content="2024-11-28T12:34:13.342Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="VASP基础知识">
 <meta name="twitter:card" content="summary">
@@ -1713,7 +1713,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1732791707215),
+    lastupdate: new Date(1732797277018),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2589,6 +2589,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>​	※ 当IBRION=1,2,3时，POTIM默认设置为<font color=red>0.5</font>；</p>
 <p>​	※ 当IBRION=5,6时，POTIM默认设置为<font color=red>0.015</font>。</p>
 <p>当出现不收敛的情况是，可以根据当前IBRION设置下的默认值适当缩小POTIM来使计算更易收敛。</p>
+<h3 id="encut-参数"><a class="markdownIt-Anchor" href="#encut-参数"></a> <strong>ENCUT 参数</strong></h3>
+<p>ENCUT参数指定了展开波函数用到的平面波基组所对应的截断能量。</p>
+<p>截断能越大，代表由于描述波函数的<strong>基组数量越多</strong>，<strong>计算精度越高</strong>，而相应的计算耗时也越长。</p>
+<p>每个元素的赝势文件中都规定了元素价层电子与对应的最大截断能ENMAX。如果没有设置ENCUT，则会默认ENCUT=ENMAX。</p>
+<blockquote>
+<p><strong><font color=red>在计算吸附等涉及多个体系的情形时需要注意ENCUT取值和KPOINTS设置的统一</font></strong></p>
+</blockquote>
+<h3 id="ncorenpar-参数"><a class="markdownIt-Anchor" href="#ncorenpar-参数"></a> <strong>NCORE/NPAR 参数</strong></h3>
+<p>NCORE/NPAR参数用于控制并行计算：</p>
+<p>​	※ NCORE：控制参与单个并行计算的核数量；</p>
+<p>​	※ NPAR：控制并行计算的并行数。</p>
+<p>NCORE=计算过程中划配的核数/NPAR</p>
+<blockquote>
+<p>这两个参数<strong>只能选取其中之一</strong>来使用</p>
+</blockquote>
 
   </div>
   
@@ -2613,7 +2628,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-11-28T19:01:27+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-11-28T20:34:13+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Nov 28, 2024</p>
@@ -2766,7 +2781,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#system-%E5%8F%82%E6%95%B0"><span class="toc-text"> SYSTEM 参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ismear-%E5%8F%82%E6%95%B0"><span class="toc-text"> ISMEAR 参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sigma-%E5%8F%82%E6%95%B0"><span class="toc-text"> SIGMA 参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ibrion-%E5%8F%82%E6%95%B0"><span class="toc-text"> IBRION 参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ispin-%E5%8F%82%E6%95%B0"><span class="toc-text"> ISPIN 参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#magmom-%E5%8F%82%E6%95%B0"><span class="toc-text"> MAGMOM 参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ediff-%E5%8F%82%E6%95%B0"><span class="toc-text"> EDIFF 参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ediffg-%E5%8F%82%E6%95%B0"><span class="toc-text"> EDIFFG 参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nsw-%E5%8F%82%E6%95%B0"><span class="toc-text"> NSW 参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nelm-%E5%8F%82%E6%95%B0"><span class="toc-text"> NELM 参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#potim-%E5%8F%82%E6%95%B0"><span class="toc-text"> POTIM 参数</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#system-%E5%8F%82%E6%95%B0"><span class="toc-text"> SYSTEM 参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ismear-%E5%8F%82%E6%95%B0"><span class="toc-text"> ISMEAR 参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sigma-%E5%8F%82%E6%95%B0"><span class="toc-text"> SIGMA 参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ibrion-%E5%8F%82%E6%95%B0"><span class="toc-text"> IBRION 参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ispin-%E5%8F%82%E6%95%B0"><span class="toc-text"> ISPIN 参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#magmom-%E5%8F%82%E6%95%B0"><span class="toc-text"> MAGMOM 参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ediff-%E5%8F%82%E6%95%B0"><span class="toc-text"> EDIFF 参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ediffg-%E5%8F%82%E6%95%B0"><span class="toc-text"> EDIFFG 参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nsw-%E5%8F%82%E6%95%B0"><span class="toc-text"> NSW 参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nelm-%E5%8F%82%E6%95%B0"><span class="toc-text"> NELM 参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#potim-%E5%8F%82%E6%95%B0"><span class="toc-text"> POTIM 参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#encut-%E5%8F%82%E6%95%B0"><span class="toc-text"> ENCUT 参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ncorenpar-%E5%8F%82%E6%95%B0"><span class="toc-text"> NCORE&#x2F;NPAR 参数</span></a></li></ol>
     </div>
   </section>
 
@@ -3391,7 +3406,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Catalyst Calculation Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"Blog by PANTARONNE"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Catalyst Calculation Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/VASP学习/","name":"VASP学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/11/25/blog02/","name":"INCAR文件的编写"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Catalyst Calculation Blog","url":"http://example.com/","keywords":null,"description":"Blog by PANTARONNE","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"Blog by PANTARONNE"},"publisher":{"@type":"Organization","name":"Catalyst Calculation Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"INCAR文件的编写","description":"Blog by PANTARONNE","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/11/25/blog02/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Catalyst Calculation Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/11/25/blog02/","wordCount":0,"datePublished":"2024-11-24T16:00:00.000Z","dateModified":"2024-11-28T11:01:27.801Z","articleSection":"VASP学习","keywords":"VASP基础知识","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Catalyst Calculation Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"Blog by PANTARONNE"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Catalyst Calculation Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/VASP学习/","name":"VASP学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/11/25/blog02/","name":"INCAR文件的编写"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Catalyst Calculation Blog","url":"http://example.com/","keywords":null,"description":"Blog by PANTARONNE","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"Blog by PANTARONNE"},"publisher":{"@type":"Organization","name":"Catalyst Calculation Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"INCAR文件的编写","description":"Blog by PANTARONNE","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/11/25/blog02/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Catalyst Calculation Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/11/25/blog02/","wordCount":0,"datePublished":"2024-11-24T16:00:00.000Z","dateModified":"2024-11-28T12:34:13.342Z","articleSection":"VASP学习","keywords":"VASP基础知识","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

@@ -1710,7 +1710,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1733468246279),
+    lastupdate: new Date(1733469767586),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2449,22 +2449,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 						<h2>2024</h2>
 					
 						<div class='timenode'>
-								<a class="meta" href="/2024/11/28/blog04/">
-									<time>11-28</time>
-									
-										POSCAR文件的编写
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
 								<a class="meta" href="/2024/11/28/blog03/">
 									<time>11-28</time>
 									
@@ -2481,10 +2465,42 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 				
 					
 						<div class='timenode'>
+								<a class="meta" href="/2024/11/28/blog04/">
+									<time>11-28</time>
+									
+										POSCAR文件的编写
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
 								<a class="meta" href="/2024/11/28/blog05/">
 									<time>11-28</time>
 									
 										频率计算
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/2024/11/28/blog06/">
+									<time>11-28</time>
+									
+										晶格参数确定
 									
 									
 									
@@ -2637,7 +2653,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <li><a class="flat-box"
             title="/categories/VASP%E5%AD%A6%E4%B9%A0/" href="/categories/VASP%E5%AD%A6%E4%B9%A0/"
             active-action="action-categoriesVASPE5ADA6E4B9A0"
-            ><div class='name'>VASP学习</div><div class='badge'>(4)</div></a></li>
+            ><div class='name'>VASP学习</div><div class='badge'>(5)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/" href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/"
@@ -2672,7 +2688,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-      <a href="/tags/VASP%E5%9F%BA%E7%A1%80/" style="font-size: 24px; color: #555">VASP基础</a> <a href="/tags/%E5%8F%8D%E7%9B%B8%E5%82%AC%E5%8C%96%E5%89%82%E5%BB%BA%E6%A8%A1/" style="font-size: 14px; color: #999">反相催化剂建模</a>
+      <a href="/tags/VASP%E5%9B%BA%E4%BD%93%E8%AE%A1%E7%AE%97/" style="font-size: 14px; color: #999">VASP固体计算</a> <a href="/tags/VASP%E5%9F%BA%E7%A1%80/" style="font-size: 24px; color: #555">VASP基础</a> <a href="/tags/%E5%8F%8D%E7%9B%B8%E5%82%AC%E5%8C%96%E5%89%82%E5%BB%BA%E6%A8%A1/" style="font-size: 14px; color: #999">反相催化剂建模</a> <a href="/tags/%E5%B8%B8%E7%94%A8%E8%84%9A%E6%9C%AC/" style="font-size: 14px; color: #999">常用脚本</a>
     </div>
   </section>
 
@@ -3038,6 +3054,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <script>
 
+  volantis.css("https://gcore.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/night-owl.min.css");
+
+
+  volantis.js("https://gcore.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js").then(()=>{
+    volantis.requestAnimationFrame(hljs.highlightAll)
+  })
+  volantis.pjax.push(()=>{
+    document.querySelectorAll('pre code').forEach((block) => {
+      hljs.highlightElement(block);
+    });
+  },"highlightjs")
 
 
   function pjax_highlightjs_copyCode(){

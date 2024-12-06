@@ -45,7 +45,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-11-25T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-11-29T03:41:09.999Z">
+<meta property="article:modified_time" content="2024-12-06T07:08:57.955Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="VASP基础">
 <meta name="twitter:card" content="summary">
@@ -1713,7 +1713,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1733468246279),
+    lastupdate: new Date(1733469767586),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2535,7 +2535,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p> ※ 对于金属ISMEAR=1/0、非金属ISMEAR=0时，一般SIGMA取0.1，或取更为严格的0.05；</p>
 <p> ※ 对于气体分子、原子体系：ISMEAR=0、SIGMA=0.01。</p>
 <p>实际操作中的一个测试标准：SIGMA的取值要保证OUTCAR中的entropy T*S一项平均到每个原子上，要小于1-2meV。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep &#x27;entropy T&#x27; OUTCAR</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep &#x27;entropy T&#x27; OUTCAR</span><br></pre></td></tr></table></figure>
 <h3 id="ibrion-参数"><a class="markdownIt-Anchor" href="#ibrion-参数"></a> <strong>IBRION 参数</strong></h3>
 <p>IBRION参数决定了结构的优化过程。一般而言，优化结构的时候常用的参数有：</p>
 <p> ※ IBRION=3，当初始结构很差的时候；</p>
@@ -2563,7 +2563,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </blockquote>
 <h3 id="magmom-参数"><a class="markdownIt-Anchor" href="#magmom-参数"></a> <strong>MAGMOM 参数</strong></h3>
 <p>MAGMOM参数用于指定体系中原子的初始磁矩，在计算复杂体系时有助于加快计算速度，并保持计算结果的正确性。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">MAGMOM = [real array]</span><br><span class="line"></span><br><span class="line">Default:</span><br><span class="line">MAGMOM = NIONS*1.0 for ISPIN = 2</span><br><span class="line">       = 3*NIONS*1.0 for non-collinear magnetic systems</span><br><span class="line"></span><br><span class="line">e.g MAGMOM = 2*2 or 2 2</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">MAGMOM = [real array]</span><br><span class="line"></span><br><span class="line">Default:</span><br><span class="line">MAGMOM = NIONS*1.0 for ISPIN = 2</span><br><span class="line">       = 3*NIONS*1.0 for non-collinear magnetic systems</span><br><span class="line"></span><br><span class="line">e.g MAGMOM = 2*2 or 2 2</span><br></pre></td></tr></table></figure>
 <p><font color=red>注意：*前后不应有空格</font></p>
 <p>MOGMOM设置时，初始值不要求与实验值完全一致，一般来说取大一些（如1.5倍）比较好。</p>
 <h3 id="ediff-参数"><a class="markdownIt-Anchor" href="#ediff-参数"></a> <strong>EDIFF 参数</strong></h3>
@@ -2582,7 +2582,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p> ※ 对于一般的体系通常设置NELM=100；</p>
 <p> ※ 对于电子结构较难收敛的体系，可以设置NELM=200；</p>
 <p> ※ 倘若增加电子步效果不佳，可以尝试改变AMIX、BMIX两个参数。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">AMIX = 0.2</span><br><span class="line">BMIX = 0.00001</span><br><span class="line">AMIX_MAG = 0.8</span><br><span class="line">BMIX_MAG = 0.00001</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">AMIX = 0.2</span><br><span class="line">BMIX = 0.00001</span><br><span class="line">AMIX_MAG = 0.8</span><br><span class="line">BMIX_MAG = 0.00001</span><br></pre></td></tr></table></figure>
 <h3 id="potim-参数"><a class="markdownIt-Anchor" href="#potim-参数"></a> <strong>POTIM 参数</strong></h3>
 <p>POTIM设置分子动力学的时间步长或离子弛豫的步宽（可以理解成离子步之间空间坐标的调整大小）。</p>
 <p> ※ 当IBRION=0时，VASP执行分子动力学模拟（MD）的任务，需设置模拟时间步长，<strong>必须提供</strong>；</p>
@@ -2628,10 +2628,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-11-29T11:41:09+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-12-06T15:08:57+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Nov 29, 2024</p>
+    <p>更新于：Dec 6, 2024</p>
   </a>
 </div>
 
@@ -3153,6 +3153,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <script>
 
+  volantis.css("https://gcore.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/night-owl.min.css");
+
+
+  volantis.js("https://gcore.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js").then(()=>{
+    volantis.requestAnimationFrame(hljs.highlightAll)
+  })
+  volantis.pjax.push(()=>{
+    document.querySelectorAll('pre code').forEach((block) => {
+      hljs.highlightElement(block);
+    });
+  },"highlightjs")
 
 
   function pjax_highlightjs_copyCode(){
@@ -3406,7 +3417,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Catalyst Calculation Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"Blog by PANTARONNE"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Catalyst Calculation Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/VASP学习/","name":"VASP学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/11/26/blog02/","name":"INCAR文件的编写"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Catalyst Calculation Blog","url":"http://example.com/","keywords":null,"description":"Blog by PANTARONNE","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"Blog by PANTARONNE"},"publisher":{"@type":"Organization","name":"Catalyst Calculation Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"INCAR文件的编写","description":"Bigbro教程中有关INCAR知识的整合","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/11/26/blog02/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Catalyst Calculation Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/11/26/blog02/","wordCount":0,"datePublished":"2024-11-25T16:00:00.000Z","dateModified":"2024-11-29T03:41:09.999Z","articleSection":"VASP学习","keywords":"VASP基础","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Catalyst Calculation Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"Blog by PANTARONNE"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Catalyst Calculation Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/VASP学习/","name":"VASP学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/11/26/blog02/","name":"INCAR文件的编写"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Catalyst Calculation Blog","url":"http://example.com/","keywords":null,"description":"Blog by PANTARONNE","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"Blog by PANTARONNE"},"publisher":{"@type":"Organization","name":"Catalyst Calculation Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"INCAR文件的编写","description":"Bigbro教程中有关INCAR知识的整合","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/11/26/blog02/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Catalyst Calculation Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/11/26/blog02/","wordCount":0,"datePublished":"2024-11-25T16:00:00.000Z","dateModified":"2024-12-06T07:08:57.955Z","articleSection":"VASP学习","keywords":"VASP基础","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

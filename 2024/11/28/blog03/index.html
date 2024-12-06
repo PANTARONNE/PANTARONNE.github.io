@@ -45,7 +45,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-11-27T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-12-06T07:09:09.577Z">
+<meta property="article:modified_time" content="2024-12-06T13:31:43.493Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="VASP基础">
 <meta name="twitter:card" content="summary">
@@ -1713,7 +1713,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1733489454332),
+    lastupdate: new Date(1733491962813),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2522,7 +2522,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="post-body" itemprop="articleBody">
     <h3 id="kpoints的基本结构"><a class="markdownIt-Anchor" href="#kpoints的基本结构"></a> <strong>KPOINTS的基本结构</strong></h3>
 <p>一个典型的KPOINT文件结构如下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">K-POINTS</span><br><span class="line"> 0</span><br><span class="line">Gamma</span><br><span class="line">1 1 1</span><br><span class="line">0 0 0</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">K-POINTS</span><br><span class="line"> <span class="number">0</span></span><br><span class="line">Gamma</span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
 <p> ※ 第一行：K-POINTS文件的标题，可随意取，但不可以没有；</p>
 <p> ※ 第二行：0代表自动生成K点；</p>
 <p> ※ 第三行：网格的生成方式；</p>
@@ -2565,7 +2565,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-12-06T15:09:09+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-12-06T21:31:43+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Dec 6, 2024</p>
@@ -2648,18 +2648,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2024/12/02/blog05/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>频率计算</p>
-          <p class='content'> 
-</p>
-        </a>
-      
-      
-        <a class='next' href='/2024/11/28/blog04/'>
-          <p class='title'>POSCAR文件的编写<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/2024/11/28/blog04/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>POSCAR文件的编写</p>
           <p class='content'> POSCAR的基本结构
 以乙醇为例，一个典型的POSCAR文件结构如下：
 1234567891011121314151617EtOH1.020.0 0.0 0.00.0 20.0 0.00.0...</p>
+        </a>
+      
+      
+        <a class='next' href='/2024/11/27/note01/'>
+          <p class='title'>吸附能计算中的巨正则系综方法<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'> Nature of Zirconia on a Copper Inverse Catalyst Under CO2 Hydrogenation Conditions (JACS)
+ 1.  简...</p>
         </a>
       
     </div>
@@ -3353,7 +3353,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Catalyst Calculation Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"Blog by PANTARONNE"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Catalyst Calculation Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/VASP学习/","name":"VASP学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/11/28/blog03/","name":"KPOINTS文件的编写"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Catalyst Calculation Blog","url":"http://example.com/","keywords":null,"description":"Blog by PANTARONNE","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"Blog by PANTARONNE"},"publisher":{"@type":"Organization","name":"Catalyst Calculation Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"KPOINTS文件的编写","description":"Bigbro教程中有关KPOINTS知识的整合","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/11/28/blog03/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Catalyst Calculation Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/11/28/blog03/","wordCount":0,"datePublished":"2024-11-27T16:00:00.000Z","dateModified":"2024-12-06T07:09:09.577Z","articleSection":"VASP学习","keywords":"VASP基础","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Catalyst Calculation Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"Blog by PANTARONNE"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Catalyst Calculation Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/VASP学习/","name":"VASP学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/11/28/blog03/","name":"KPOINTS文件的编写"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Catalyst Calculation Blog","url":"http://example.com/","keywords":null,"description":"Blog by PANTARONNE","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"Blog by PANTARONNE"},"publisher":{"@type":"Organization","name":"Catalyst Calculation Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"KPOINTS文件的编写","description":"Bigbro教程中有关KPOINTS知识的整合","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/11/28/blog03/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Catalyst Calculation Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/11/28/blog03/","wordCount":0,"datePublished":"2024-11-27T16:00:00.000Z","dateModified":"2024-12-06T13:31:43.493Z","articleSection":"VASP学习","keywords":"VASP基础","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
